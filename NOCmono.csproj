@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -59,18 +59,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
-    <Compile Include="MainWindow.cs" />
     <Compile Include="gtk-gui\MainWindow.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MainWindow_2.cs" />
-    <Compile Include="MainWindow_Table.cs" />
-    <Compile Include="MainWindow_Windows.cs" />
-    <Compile Include="MainWindow_Event.cs" />
-    <Compile Include="MainWindow_Widget.cs" />
-    <Compile Include="MainWindow_Widget2.cs" />
-    <Compile Include="MainWindow_Pango.cs" />
-    <Compile Include="MainWindow_Cairo.cs" />
+    <Compile Include="ExampleGtk\MainWindow.cs" />
+    <Compile Include="ExampleGtk\MainWindow_2.cs" />
+    <Compile Include="ExampleGtk\MainWindow_Cairo.cs" />
+    <Compile Include="ExampleGtk\MainWindow_Cairo2.cs" />
+    <Compile Include="ExampleGtk\MainWindow_Event.cs" />
+    <Compile Include="ExampleGtk\MainWindow_Pango.cs" />
+    <Compile Include="ExampleGtk\MainWindow_Table.cs" />
+    <Compile Include="ExampleGtk\MainWindow_Widget.cs" />
+    <Compile Include="ExampleGtk\MainWindow_Widget2.cs" />
+    <Compile Include="ExampleGtk\MainWindow_Windows.cs" />
+    <Compile Include="NtLib\NRect.cs">
+    </Compile>
+    <Compile Include="NtLib\RenderContext.cs" />
+    <Compile Include="NtLib\SimpleRNG.cs" />
+    <Compile Include="NtLib\Singleton.cs" />
+    <Compile Include="NtLib\RenderInterface.cs" />
+    <Compile Include="NtLib\EventArgs.cs" />
+    <Compile Include="NtLib\NtApplication.cs" />
+    <Compile Include="NocApplication.cs" />
+    <Compile Include="NtLib\NtInterface.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="ExampleGtk\" />
+    <Folder Include="NtLib\" />
+  </ItemGroup>
 </Project>

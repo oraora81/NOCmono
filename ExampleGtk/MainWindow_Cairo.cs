@@ -39,7 +39,7 @@ namespace NOCmono
 
                 cr.Rectangle(20, 20, 120, 80);
                 cr.Rectangle(180, 20, 80, 80);
-                cr.StrokePreserve();
+                cr.StrokePreserve();    
                 cr.SetSourceRGB(1, 1, 1);
                 cr.Fill();
             }
@@ -71,6 +71,46 @@ namespace NOCmono
                 cr.StrokePreserve();
                 cr.SetSourceRGB(1, 1, 1);
                 cr.Fill();
+            }
+
+            // draw color rectagles
+
+            cr.Translate(-220, -180);
+            {
+                cr.SetSourceRGB(0.2, 0.23, 0.9);
+                cr.Rectangle(200, 450, 90, 60);
+                cr.Fill();
+
+                cr.SetSourceRGB(0.9, 0.1, 0.1);
+                cr.Rectangle(330, 450, 90, 60);
+                cr.Fill();
+
+                cr.SetSourceRGB(0.4, 0.9, 0.4);
+                cr.Rectangle(460, 450, 90, 60);
+                cr.Fill();
+            }
+
+            // draw transparent rect
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    cr.SetSourceRGBA(0, 0, 1, (i + 1) * 0.1);
+                    cr.Rectangle(50*(i + 1), 400, 40, 40);
+                    cr.Fill();
+                }
+            }
+
+            // show Text
+            {
+                cr.SetSourceRGB(0.1, 0.1, 0.1);
+                cr.SelectFontFace("SignPainter", FontSlant.Normal, FontWeight.Bold);
+                cr.SetFontSize(20);
+
+                cr.MoveTo(20, 500);
+                cr.ShowText("Most relationships seem so transitory ");
+                cr.MoveTo(20, 530);
+                cr.ShowText("They're all goot but not the permanent one");
+
             }
 
             // Draw Filled Circle
