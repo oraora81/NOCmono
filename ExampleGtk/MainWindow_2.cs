@@ -15,7 +15,7 @@ namespace NOCmono
             VBox vbox = new VBox(false, 5);
             HBox hbox = new HBox(true, 3);
 
-            Alignment valign = new Alignment(0, 1, 0, 0);
+            Alignment valign = new Alignment(0, 0.5f, 0, 0);
             vbox.PackStart(valign);
 
             Button ok = new Button("OK");
@@ -25,7 +25,7 @@ namespace NOCmono
             hbox.Add(ok);
             hbox.Add(close);
 
-            Alignment halign = new Alignment(1, 0, 0, 0);
+            Alignment halign = new Alignment(0.5f, 0, 0, 0);
             halign.Add(hbox);
 
             vbox.PackStart(halign, false, false, 3);

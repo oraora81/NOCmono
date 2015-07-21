@@ -7,7 +7,7 @@ namespace NOCmono
     {
         public static void Main(string[] args)
         {
-            NocApplication app = new NocApplication();
+            NocApplication app = new NocApplication(args);
 
             if (app.Initialize() == false)
             {
